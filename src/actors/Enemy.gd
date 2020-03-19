@@ -1,6 +1,10 @@
 extends Actor
 
+
+
 var path: = PoolVector2Array() setget set_path
+
+
 
 func _process(delta: float) -> void:
 	var move_distance: = speed.x * delta

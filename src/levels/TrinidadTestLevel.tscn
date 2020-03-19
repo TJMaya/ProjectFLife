@@ -21,5 +21,9 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 0, 0, 3, 2, 0, 4, 0, 0, 5, 0, 0, 
 position = Vector2( 179, 91 )
 speed = Vector2( 200, 200 )
 
+[node name="Enemy2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 384, 496 )
+speed = Vector2( 200, 200 )
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 760, 330 )
