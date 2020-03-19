@@ -1,12 +1,11 @@
 extends Actor
 
-
-
 var path: = PoolVector2Array() setget set_path
 
+func _ready() -> void:
+	set_physics_process(false)
 
-
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var move_distance: = speed.x * delta
 	move_along_path(move_distance)
 
