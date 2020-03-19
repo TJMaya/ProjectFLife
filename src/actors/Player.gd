@@ -1,6 +1,6 @@
 extends Actor
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction: = get_direction()
 	_velocity = calculate_move_velocity(_velocity, direction, speed)
 	_velocity = move_and_slide(_velocity)
