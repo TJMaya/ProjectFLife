@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="ProjectFLife"
+run/main_scene="res://src/levels/TrinidadTestLevel.tscn"
 config/icon="res://assets/icon.png"
 
 [input]

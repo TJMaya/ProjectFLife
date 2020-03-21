@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/GUI stuff/Menu.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 1.01855, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="MenuButton" parent="."]
+margin_left = 418.707
+margin_top = 150.509
+margin_right = 573.707
+margin_bottom = 261.509
+toggle_mode = false
+text = "Start Game"
+flat = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionsButton" type="MenuButton" parent="."]
+margin_left = 416.976
+margin_top = 280.84
+margin_right = 583.976
+margin_bottom = 383.84
+toggle_mode = false
+text = "Options"
+flat = false
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 205.38
+margin_top = 20.3748
+margin_right = 805.38
+margin_bottom = 130.375
+text = "Eldyngard"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
