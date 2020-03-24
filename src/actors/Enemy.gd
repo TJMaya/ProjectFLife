@@ -1,13 +1,35 @@
 extends Actor
 
 var path: = PoolVector2Array() setget set_path
+var knock_back: = false
+export var follow_distance: = 300.0
+export var kb_force: = 10.0
+export var kb_distance: = 80.0
 
 func _ready() -> void:
 	set_physics_process(false)
 
+func _on_PlayerDetector_area_entered(area):
+	speed.x = -100
+	knock_back = true
+
 func _physics_process(delta: float) -> void:
 	var move_distance: = speed.x * delta
-	move_along_path(move_distance)
+	
+	if follow_distance >= global_position.distance_to(get_parent().get_node("Player").global_position) and knock_back == false:
+		move_along_path(move_distance)
+	elif knock_back == true:
+		move_and_slide(calculate_kb_velocity())
+		if global_position.distance_to(get_parent().get_node("Player").global_position) >= kb_distance:
+			speed.x = 100
+			knock_back = false
+	else:
+		move_and_slide(_velocity)
+
+func calculate_kb_velocity() -> Vector2:
+	var kb_Velocity: = Vector2.ZERO
+	return Vector2((global_position.x - get_parent().get_node("Player").global_position.x) * kb_force, 
+	(global_position.y - get_parent().get_node("Player").global_position.y) * kb_force)
 
 func move_along_path(distance: float) -> void:
 	var start_point: = position
@@ -29,3 +51,4 @@ func set_path(value : PoolVector2Array) -> void:
 	if value.size() == 0:
 		return
 	set_process(true)
+
