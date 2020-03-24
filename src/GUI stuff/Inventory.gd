@@ -18,10 +18,10 @@ func _ready():
 func _input(event):
 	if Input.is_key_pressed(KEY_I) and inv == false:
 		get_node(".").hide()
-		get_node("ParallaxBackground/ParallaxLayer/brownback").hide()
+		get_node("brownback").hide()
 		inv = true
 	elif Input.is_key_pressed(KEY_I) and inv == true:
 		get_node(".").show()
-		get_node("ParallaxBackground/ParallaxLayer/brownback").show()
+		get_node("brownback").show()
 		inv = false
 	pass # Replace with function body.

@@ -25,11 +25,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="brownback" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 511.023, 301.787 )
 scale = Vector2( 1.63188, 1.44954 )
-
-[node name="brownback" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 313.15, 208.195 )
 texture = ExtResource( 2 )
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 317.0
+margin_top = 9.0
+margin_right = 641.0
+margin_bottom = 78.0
+text = "Inventory"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 707.347
+margin_top = 131.48
+margin_right = 947.347
+margin_bottom = 496.48
+__meta__ = {
+"_edit_use_anchors_": false
+}
