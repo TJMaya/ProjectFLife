@@ -9,10 +9,6 @@ export var kb_distance: = 80.0
 func _ready() -> void:
 	set_physics_process(false)
 
-func _on_PlayerDetector_area_entered(area):
-	speed.x = -100
-	knock_back = true
-
 func _physics_process(delta: float) -> void:
 	var move_distance: = speed.x * delta
 	
@@ -25,6 +21,13 @@ func _physics_process(delta: float) -> void:
 			knock_back = false
 	else:
 		move_and_slide(_velocity)
+		
+	check_death()
+
+func _on_AttackDetector_area_entered(area):
+	speed.x = -100
+	health -= 20.0
+	knock_back = true
 
 func calculate_kb_velocity() -> Vector2:
 	var kb_Velocity: = Vector2.ZERO
@@ -52,3 +55,6 @@ func set_path(value : PoolVector2Array) -> void:
 		return
 	set_process(true)
 
+func check_death() -> void:
+	if health <= 0.0:
+		queue_free()
