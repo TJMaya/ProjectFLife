@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/actors/Enemy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/tilemaps/grasslands.tres" type="TileSet" id=3]
 [ext_resource path="res://src/levels/NodeController.gd" type="Script" id=4]
+[ext_resource path="res://src/GUI stuff/Inventory.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/GUI stuff/PauseMenu.tscn" type="PackedScene" id=6]
 
 [node name="TrinidadTestLevel" type="Node2D"]
 script = ExtResource( 4 )
@@ -29,3 +31,11 @@ speed = Vector2( 100, 100 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 760, 330 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory" parent="CanvasLayer" instance=ExtResource( 5 )]
+visible = false
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 6 )]
+visible = false
