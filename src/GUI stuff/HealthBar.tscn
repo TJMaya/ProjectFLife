@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/GUI stuff/Fonts/white box.png" type="Texture" id=1]
+[ext_resource path="res://src/GUI stuff/HealthBar.gd" type="Script" id=2]
+
+[node name="HealthBar" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 0.0277544, 0.0267498 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthBarUnder" type="TextureProgress" parent="."]
+margin_left = 13000.0
+margin_top = 20000.0
+margin_right = 14909.0
+margin_bottom = 20827.0
+rect_scale = Vector2( 5, 1.5 )
+value = 100.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 1 )
+tint_under = Color( 0, 0, 0, 1 )
+tint_progress = Color( 0.729412, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthBarOver" type="TextureProgress" parent="."]
+margin_left = 13000.0
+margin_top = 20000.0
+margin_right = 14909.0
+margin_bottom = 20827.0
+rect_scale = Vector2( 5, 1.5 )
+value = 100.0
+texture_progress = ExtResource( 1 )
+tint_under = Color( 0, 0, 0, 1 )
+tint_progress = Color( 0, 1, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpdateTween" type="Tween" parent="."]

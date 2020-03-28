@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blackbar.png-ccb8f97c4e8db8e96907ea7251f90a47.stex"
+path="res://.import/brownback.jpg-3c749f8c27d1a55fffb89f3062f27a56.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/GUI stuff/Fonts/blackbar.png"
-dest_files=[ "res://.import/blackbar.png-ccb8f97c4e8db8e96907ea7251f90a47.stex" ]
+source_file="res://src/GUI stuff/Fonts/brownback.jpg"
+dest_files=[ "res://.import/brownback.jpg-3c749f8c27d1a55fffb89f3062f27a56.stex" ]
 
 [params]
 

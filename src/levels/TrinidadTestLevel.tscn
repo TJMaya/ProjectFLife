@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/actors/Enemy.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/levels/NodeController.gd" type="Script" id=4]
 [ext_resource path="res://src/GUI stuff/Inventory.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/GUI stuff/PauseMenu.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/GUI stuff/HealthBar.tscn" type="PackedScene" id=7]
 
 [node name="TrinidadTestLevel" type="Node2D"]
 script = ExtResource( 4 )
@@ -25,6 +26,13 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 0, 0, 3, 2, 0, 4, 0, 0, 5, 0, 0, 
 position = Vector2( 179, 91 )
 speed = Vector2( 100, 100 )
 
+[node name="HealthBar" parent="Enemy" instance=ExtResource( 7 )]
+margin_left = -177.195
+margin_top = -269.354
+margin_right = -177.195
+margin_bottom = -269.354
+rect_scale = Vector2( 0.01, 0.01 )
+
 [node name="Enemy2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 384, 496 )
 speed = Vector2( 100, 100 )
@@ -32,10 +40,12 @@ speed = Vector2( 100, 100 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 760, 330 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="GameUI" type="CanvasLayer" parent="."]
 
-[node name="Inventory" parent="CanvasLayer" instance=ExtResource( 5 )]
+[node name="Inventory" parent="GameUI" instance=ExtResource( 5 )]
 visible = false
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 6 )]
+[node name="PauseMenu" parent="GameUI" instance=ExtResource( 6 )]
 visible = false
+
+[node name="HealthBar" parent="GameUI" instance=ExtResource( 7 )]
