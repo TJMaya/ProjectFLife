@@ -26,13 +26,6 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 0, 0, 3, 2, 0, 4, 0, 0, 5, 0, 0, 
 position = Vector2( 179, 91 )
 speed = Vector2( 100, 100 )
 
-[node name="HealthBar" parent="Enemy" instance=ExtResource( 7 )]
-margin_left = -177.195
-margin_top = -269.354
-margin_right = -177.195
-margin_bottom = -269.354
-rect_scale = Vector2( 0.01, 0.01 )
-
 [node name="Enemy2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 384, 496 )
 speed = Vector2( 100, 100 )

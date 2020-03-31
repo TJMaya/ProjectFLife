@@ -28,6 +28,7 @@ func _on_AttackDetector_area_entered(area):
 	speed.x = -100
 	health -= 20.0
 	knock_back = true
+	get_node("HealthBar")._on_health_updated(health)
 
 func calculate_kb_velocity() -> Vector2:
 	var kb_Velocity: = Vector2.ZERO
