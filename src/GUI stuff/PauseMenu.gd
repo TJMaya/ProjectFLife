@@ -19,3 +19,6 @@ func _on_Button_pressed():
 	get_node(".").hide()
 	get_tree().paused = not get_tree().paused
 	pause = false
+
+func _on_Button2_pressed():
+	get_tree().quit()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/actors/Enemy.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/GUI stuff/Inventory.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/GUI stuff/PauseMenu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/GUI stuff/HealthBar.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/objects/Object.tscn" type="PackedScene" id=8]
 
 [node name="TrinidadTestLevel" type="Node2D"]
 script = ExtResource( 4 )
@@ -41,4 +42,10 @@ visible = false
 [node name="PauseMenu" parent="GameUI" instance=ExtResource( 6 )]
 visible = false
 
-[node name="HealthBar" parent="GameUI" instance=ExtResource( 7 )]
+[node name="HealthUI" type="CanvasLayer" parent="GameUI"]
+
+[node name="HealthBar" parent="GameUI/HealthUI" instance=ExtResource( 7 )]
+show_behind_parent = true
+
+[node name="Object" parent="." instance=ExtResource( 8 )]
+position = Vector2( 763.19, 214.201 )

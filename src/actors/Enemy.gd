@@ -8,6 +8,7 @@ export var kb_distance: = 80.0
 
 func _ready() -> void:
 	set_physics_process(false)
+	$HealthBar.hide()
 
 func _physics_process(delta: float) -> void:
 	var move_distance: = speed.x * delta
@@ -29,6 +30,7 @@ func _on_AttackDetector_area_entered(area):
 	health -= 20.0
 	knock_back = true
 	get_node("HealthBar")._on_health_updated(health)
+	$HealthBar.show()
 
 func calculate_kb_velocity() -> Vector2:
 	var kb_Velocity: = Vector2.ZERO

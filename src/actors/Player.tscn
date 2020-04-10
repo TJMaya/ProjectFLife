@@ -26,22 +26,22 @@ region = Rect2( 192, 64, 64, 64 )
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 128, 64, 64 )
+region = Rect2( 0, 192, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 64, 128, 64, 64 )
+region = Rect2( 64, 192, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 128, 128, 64, 64 )
+region = Rect2( 128, 192, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 192, 128, 64, 64 )
+region = Rect2( 192, 192, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
@@ -66,27 +66,27 @@ region = Rect2( 192, 0, 64, 64 )
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 64, 64 )
+region = Rect2( 0, 128, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 192, 64, 64 )
+region = Rect2( 64, 128, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 64, 192, 64, 64 )
+region = Rect2( 128, 128, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 128, 192, 64, 64 )
+region = Rect2( 192, 128, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 192, 192, 64, 64 )
+region = Rect2( 0, 0, 64, 64 )
 
 [sub_resource type="SpriteFrames" id=18]
 animations = [ {
@@ -97,7 +97,7 @@ animations = [ {
 }, {
 "frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
-"name": "RunRight",
+"name": "RunUp",
 "speed": 12.0
 }, {
 "frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
@@ -105,15 +105,15 @@ animations = [ {
 "name": "RunDown",
 "speed": 12.0
 }, {
-"frames": [ SubResource( 13 ) ],
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "RunRight",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 17 ) ],
 "loop": false,
 "name": "IdleDown",
 "speed": 0.0
-}, {
-"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
-"loop": true,
-"name": "RunUp",
-"speed": 12.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=19]
@@ -163,8 +163,8 @@ shape = SubResource( 20 )
 
 [node name="AttackRight" type="Area2D" parent="."]
 position = Vector2( 36, -14 )
-collision_layer = 8
-collision_mask = 8
+collision_layer = 24
+collision_mask = 24
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRight"]
 modulate = Color( 1, 0.415686, 0.415686, 1 )
@@ -174,8 +174,8 @@ disabled = true
 
 [node name="AttackLeft" type="Area2D" parent="."]
 position = Vector2( -28, -14 )
-collision_layer = 8
-collision_mask = 8
+collision_layer = 24
+collision_mask = 24
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackLeft"]
 modulate = Color( 1, 0.415686, 0.415686, 1 )
@@ -185,8 +185,8 @@ disabled = true
 
 [node name="AttackDown" type="Area2D" parent="."]
 position = Vector2( 3, 16 )
-collision_layer = 8
-collision_mask = 8
+collision_layer = 24
+collision_mask = 24
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackDown"]
 modulate = Color( 1, 0.415686, 0.415686, 1 )
@@ -196,8 +196,8 @@ disabled = true
 
 [node name="AttackUp" type="Area2D" parent="."]
 position = Vector2( 3, -42 )
-collision_layer = 8
-collision_mask = 8
+collision_layer = 24
+collision_mask = 24
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackUp"]
 modulate = Color( 1, 0.415686, 0.415686, 1 )

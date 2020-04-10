@@ -4,7 +4,7 @@ onready var nav_2d: Navigation2D = $Navigation2D
 onready var player: KinematicBody2D = $Player
 onready var enemy: KinematicBody2D = $Enemy
 onready var enemy2: KinematicBody2D = $Enemy2
-onready var hp = get_node("GameUI/HealthBar")
+onready var hp = get_node("GameUI/HealthUI/HealthBar")
 
 func _physics_process(_delta):
 	for enemy in get_tree().get_nodes_in_group("enemy"):

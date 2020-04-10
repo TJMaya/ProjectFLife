@@ -57,8 +57,9 @@ position = Vector2( 0, -24 )
 shape = SubResource( 3 )
 
 [node name="HealthBar" parent="." instance=ExtResource( 3 )]
-margin_left = -490.919
-margin_top = -641.971
-margin_right = -490.919
-margin_bottom = -641.971
+margin_left = -178.206
+margin_top = -269.376
+margin_right = -178.206
+margin_bottom = -269.376
+rect_scale = Vector2( 0.01, 0.01 )
 [connection signal="area_entered" from="AttackDetector" to="." method="_on_AttackDetector_area_entered"]
