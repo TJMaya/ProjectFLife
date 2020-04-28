@@ -38,6 +38,14 @@ position = Vector2( 760, 330 )
 
 [node name="Inventory" parent="GameUI" instance=ExtResource( 5 )]
 visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
 
 [node name="PauseMenu" parent="GameUI" instance=ExtResource( 6 )]
 visible = false
@@ -46,6 +54,10 @@ visible = false
 
 [node name="HealthBar" parent="GameUI/HealthUI" instance=ExtResource( 7 )]
 show_behind_parent = true
+margin_left = -334.915
+margin_top = -512.186
+margin_right = -334.915
+margin_bottom = -512.186
 
 [node name="Object" parent="." instance=ExtResource( 8 )]
 position = Vector2( 763.19, 214.201 )

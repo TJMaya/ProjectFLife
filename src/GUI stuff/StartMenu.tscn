@@ -1,21 +1,21 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://src/GUI stuff/Menu.gd" type="Script" id=1]
+[ext_resource path="res://src/GUI stuff/StartMenu.gd" type="Script" id=1]
 
-[node name="Control" type="Control"]
+[node name="StartMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_scale = Vector2( 1.01855, 1 )
+rect_scale = Vector2( 1.01855, 0.996503 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="StartButton" type="MenuButton" parent="."]
-margin_left = 418.707
-margin_top = 150.509
-margin_right = 573.707
-margin_bottom = 261.509
+margin_left = 415.091
+margin_top = 146.813
+margin_right = 570.091
+margin_bottom = 257.813
 toggle_mode = false
 text = "Start Game"
 flat = false
@@ -31,6 +31,21 @@ margin_bottom = 383.84
 toggle_mode = false
 text = "Options"
 flat = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitButton" type="MenuButton" parent="."]
+margin_left = 409.744
+margin_top = 413.901
+margin_right = 576.744
+margin_bottom = 516.901
+toggle_mode = false
+text = "Exit"
+flat = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextEdit" type="TextEdit" parent="."]
 margin_left = 205.38
@@ -42,3 +57,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]

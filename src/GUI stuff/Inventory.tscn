@@ -14,12 +14,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
-margin_left = 78.5929
-margin_top = 103.276
-margin_right = 416.593
-margin_bottom = 438.276
-rect_scale = Vector2( 0.348648, 0.409867 )
+[node name="brownback" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 511.023, 301.787 )
+scale = Vector2( 0.75, 0.760119 )
+texture = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="brownback"]
+margin_left = 223.889
+margin_top = -198.652
+margin_right = 561.889
+margin_bottom = 136.348
+rect_scale = Vector2( 0.177177, 0.195519 )
 toggle_mode = true
 keep_pressed_outside = true
 icon = ExtResource( 1 )
@@ -27,27 +33,52 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="brownback" type="Sprite" parent="."]
-show_behind_parent = true
-position = Vector2( 511.023, 301.787 )
-scale = Vector2( 1.63188, 1.44954 )
-texture = ExtResource( 2 )
-
-[node name="TextEdit" type="TextEdit" parent="."]
-margin_left = 317.0
-margin_top = 9.0
-margin_right = 641.0
-margin_bottom = 78.0
+[node name="TextEdit" type="TextEdit" parent="brownback"]
+margin_left = -118.895
+margin_top = -201.986
+margin_right = 205.105
+margin_bottom = -132.986
 text = "Inventory"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="."]
-margin_left = 707.347
-margin_top = 131.48
-margin_right = 947.347
-margin_bottom = 496.48
+[node name="Panel" type="Panel" parent="brownback"]
+margin_left = -243.113
+margin_top = -124.303
+margin_right = -3.1131
+margin_bottom = 240.697
+rect_scale = Vector2( 2.05674, 0.844455 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ItemList" type="ItemList" parent="brownback/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -108.6
+margin_top = -159.45
+margin_right = 131.4
+margin_bottom = 205.55
+rect_scale = Vector2( 0.910733, 0.866195 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="brownback"]
+visible = false
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -681.364
+margin_top = -397.026
+margin_right = -681.364
+margin_bottom = -397.026
+rect_scale = Vector2( 2.17868, 1.91679 )
+color = Color( 0, 0, 0, 0.313726 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="brownback/Button" to="." method="_on_Button_pressed"]
